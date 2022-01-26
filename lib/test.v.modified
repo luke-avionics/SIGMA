@@ -1,0 +1,149 @@
+`celldefine
+module EDFCNQD1BWP30P140 (D, E, CP, CDN, Q);
+    input D, E, CP, CDN;
+    output Q;
+    reg notifier;
+    `ifdef NTC
+        `ifdef RECREM
+            wire CDN_d;
+            buf (CDN_i, CDN_d);
+        `else 
+            buf (CDN_i, CDN);
+        `endif 
+        wire D_d, E_d, CP_d;
+        pullup (SDN);
+        tsmc_mux (DE, Q_buf, D_d, E_d);
+        tsmc_dff (Q_buf, DE, CP_d, CDN_i, SDN, notifier);
+        buf (Q, Q_buf);
+    `else 
+        pullup (SDN);
+        buf (CDN_i, CDN);
+        tsmc_mux (DE, Q_buf, D, E);
+        tsmc_dff (Q_buf, DE, CP, CDN_i, SDN, notifier);
+        buf (Q, Q_buf);
+    `endif 
+
+  `ifdef TETRAMAX
+  `else
+    tsmc_xbuf (CP_D_E_SDFCHK, CP_D_E, 1'b1);
+    tsmc_xbuf (CP_D_nE_SDFCHK, CP_D_nE, 1'b1);
+    tsmc_xbuf (CP_nD_E_SDFCHK, CP_nD_E, 1'b1);
+    tsmc_xbuf (CP_nD_nE_SDFCHK, CP_nD_nE, 1'b1);
+    tsmc_xbuf (nCP_D_E_SDFCHK, nCP_D_E, 1'b1);
+    tsmc_xbuf (nCP_nD_E_SDFCHK, nCP_nD_E, 1'b1);
+    tsmc_xbuf (nCP_D_nE_SDFCHK, nCP_D_nE, 1'b1);
+    tsmc_xbuf (nCP_nD_nE_SDFCHK, nCP_nD_nE, 1'b1);
+    tsmc_xbuf (CDN_D_E_SDFCHK, CDN_D_E, 1'b1);
+    tsmc_xbuf (CDN_nD_E_SDFCHK, CDN_nD_E, 1'b1);
+    tsmc_xbuf (CDN_E_SDFCHK, CDN_E, 1'b1);
+    tsmc_xbuf (CDN_D_SDFCHK, CDN_D, 1'b1);
+    tsmc_xbuf (CDN_nD_SDFCHK, CDN_nD, 1'b1);
+    tsmc_xbuf (D_E_SDFCHK, D_E, 1'b1);
+    not (nD, D);
+    not (nE, E);
+    not (nCP, CP);
+    and (CP_D_E, CP, D, E);
+    and (CP_D_nE, CP, D, nE);
+    and (CP_nD_E, CP, nD, E);
+    and (CP_nD_nE, CP, nD, nE);
+    and (nCP_D_E, nCP, D, E);
+    and (nCP_nD_E, nCP, nD, E);
+    and (nCP_D_nE, nCP, D, nE);
+    and (nCP_nD_nE, nCP, nD, nE);
+    and (CDN_D_E, CDN, D, E);
+    and (CDN_nD_E, CDN, nD, E);
+    and (CDN_E, CDN, E);
+    and (CDN_D, CDN, D);
+    and (CDN_nD, CDN, nD);
+    and (D_E, D, E);
+
+
+  // Timing logics defined for default constraint check
+    `ifdef NTC
+      not  (E_int_not, E_d);
+      and  (D_check, CDN_i, E_d);
+    `else
+      not  (E_int_not, E);
+      and  (D_check, CDN_i, E);
+    `endif
+    and  (CP_check, CDN_i, D_check);
+    buf  (E_check, CDN_i);
+    tsmc_xbuf (CP_DEFCHK, CP_check, 1'b1);
+    tsmc_xbuf (E_DEFCHK, E_check, 1'b1);
+    tsmc_xbuf (D_DEFCHK, D_check, 1'b1);
+
+wire CP_d_0;
+wire D_d_0;
+wire CP_d_1;
+wire E_d_1;
+wire CP_d_2;
+wire E_d_2;
+wire CDN_d_3;
+wire CP_d_3;
+  specify
+    if (CP == 1'b1 && D == 1'b1 && E == 1'b1)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    if (CP == 1'b1 && D == 1'b1 && E == 1'b0)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    if (CP == 1'b1 && D == 1'b0 && E == 1'b1)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    if (CP == 1'b1 && D == 1'b0 && E == 1'b0)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    if (CP == 1'b0 && D == 1'b1 && E == 1'b1)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    if (CP == 1'b0 && D == 1'b0 && E == 1'b1)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    if (CP == 1'b0 && D == 1'b1 && E == 1'b0)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    if (CP == 1'b0 && D == 1'b0 && E == 1'b0)
+    (negedge CDN => (Q+:1'b0)) = (0, 0);
+    (posedge CP => (Q+:((E && D) || (!(E) && Q_buf)))) = (0, 0);
+    $width (negedge CDN &&& CP_D_E_SDFCHK, 0, 0, notifier);
+    $width (negedge CDN &&& CP_D_nE_SDFCHK, 0, 0, notifier);
+    $width (negedge CDN &&& CP_nD_E_SDFCHK, 0, 0, notifier);
+    $width (negedge CDN &&& CP_nD_nE_SDFCHK, 0, 0, notifier);
+    $width (negedge CDN &&& nCP_D_E_SDFCHK, 0, 0, notifier);
+    $width (negedge CDN &&& nCP_nD_E_SDFCHK, 0, 0, notifier);
+    $width (negedge CDN &&& nCP_D_nE_SDFCHK, 0, 0, notifier);
+    $width (negedge CDN &&& nCP_nD_nE_SDFCHK, 0, 0, notifier);
+    $width (posedge CP &&& CDN_D_E_SDFCHK, 0, 0, notifier);
+    $width (negedge CP &&& CDN_D_E_SDFCHK, 0, 0, notifier);
+    $width (posedge CP &&& CDN_nD_E_SDFCHK, 0, 0, notifier);
+    $width (negedge CP &&& CDN_nD_E_SDFCHK, 0, 0, notifier);
+  `ifdef NTC
+    `ifdef RECREM
+      $setuphold (posedge CP &&& CDN_E_SDFCHK, posedge D , 0, 0, notifier,,,CP_d_0,D_d_0);
+      $setuphold (posedge CP &&& CDN_E_SDFCHK, negedge D , 0, 0, notifier,,,CP_d_0,D_d_0);
+      $setuphold (posedge CP &&& CDN_D_SDFCHK, posedge E , 0, 0, notifier,,,CP_d_1,E_d_1);
+      $setuphold (posedge CP &&& CDN_D_SDFCHK, negedge E , 0, 0, notifier,,,CP_d_1,E_d_1);
+      $setuphold (posedge CP &&& CDN_nD_SDFCHK, posedge E , 0, 0, notifier,,,CP_d_2,E_d_2);
+      $setuphold (posedge CP &&& CDN_nD_SDFCHK, negedge E , 0, 0, notifier,,,CP_d_2,E_d_2);
+      $recrem (posedge CDN &&& D_E_SDFCHK, posedge CP &&& D_E_SDFCHK, 0,0, notifier, , ,CDN_d_3,CP_d_3);
+    `else
+      $setuphold (posedge CP &&& CDN_E_SDFCHK, posedge D , 0, 0, notifier,,,CP_d_0,D_d_0);
+      $setuphold (posedge CP &&& CDN_E_SDFCHK, negedge D , 0, 0, notifier,,,CP_d_0,D_d_0);
+      $setuphold (posedge CP &&& CDN_D_SDFCHK, posedge E , 0, 0, notifier,,,CP_d_1,E_d_1);
+      $setuphold (posedge CP &&& CDN_D_SDFCHK, negedge E , 0, 0, notifier,,,CP_d_1,E_d_1);
+      $setuphold (posedge CP &&& CDN_nD_SDFCHK, posedge E , 0, 0, notifier,,,CP_d_2,E_d_2);
+      $setuphold (posedge CP &&& CDN_nD_SDFCHK, negedge E , 0, 0, notifier,,,CP_d_2,E_d_2);
+      $recovery (posedge CDN &&& D_E_SDFCHK, posedge CP &&& D_E_SDFCHK, 0, notifier);
+      $hold (posedge CP &&& D_E_SDFCHK, posedge CDN , 0, notifier);
+    `endif
+  `else
+    $setuphold (posedge CP &&& CDN_E_SDFCHK, posedge D , 0, 0, notifier);
+    $setuphold (posedge CP &&& CDN_E_SDFCHK, negedge D , 0, 0, notifier);
+    $setuphold (posedge CP &&& CDN_D_SDFCHK, posedge E , 0, 0, notifier);
+    $setuphold (posedge CP &&& CDN_D_SDFCHK, negedge E , 0, 0, notifier);
+    $setuphold (posedge CP &&& CDN_nD_SDFCHK, posedge E , 0, 0, notifier);
+    $setuphold (posedge CP &&& CDN_nD_SDFCHK, negedge E , 0, 0, notifier);
+    $recovery (posedge CDN &&& D_E_SDFCHK, posedge CP &&& D_E_SDFCHK, 0, notifier);
+    $hold (posedge CP &&& D_E_SDFCHK, posedge CDN , 0, notifier);
+  `endif
+  endspecify
+assign CDN_d= ( D_E_SDFCHK ) ? CDN_d_3:CDN;
+assign CP_d= ( CDN_E_SDFCHK ) ? CP_d_0:(CDN_D_SDFCHK) ? CP_d_1:(CDN_nD_SDFCHK) ? CP_d_2:(D_E_SDFCHK) ? CP_d_3:(CDN_E_SDFCHK) ? CP_d_0:(CDN_D_SDFCHK) ? CP_d_1:(CDN_nD_SDFCHK) ? CP_d_2:CP;
+assign D_d= (CDN_E_SDFCHK) ? D_d_0:(CDN_E_SDFCHK) ? D_d_0:D;
+assign E_d= (CDN_D_SDFCHK) ? E_d_1:(CDN_nD_SDFCHK) ? E_d_2:(CDN_D_SDFCHK) ? E_d_1:(CDN_nD_SDFCHK) ? E_d_2:E;
+  `endif
+endmodule
+`endcelldefine

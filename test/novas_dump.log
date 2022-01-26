@@ -1,0 +1,351 @@
+#######################################################################################
+# log primitive debug message of FSDB dumping                                         #
+# This is for R&D to analyze when there are issues happening when FSDB dump           #
+#######################################################################################
+ANF: vcsd_get_serial_mode_status('/home/yz87/SIGMA/test/simv: undefined symbol: vcsd_get_serial_mode_status')
+ANF: vcsd_enable_sva_success_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vcsd_enable_sva_success_callback')
+ANF: vcsd_disable_sva_success_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vcsd_disable_sva_success_callback')
+ANF: vcsd_get_power_scope_name('/home/yz87/SIGMA/test/simv: undefined symbol: vcsd_get_power_scope_name')
+ANF: vcsd_begin_no_value_var_info('/home/yz87/SIGMA/test/simv: undefined symbol: vcsd_begin_no_value_var_info')
+ANF: vcsd_end_no_value_var_info('/home/yz87/SIGMA/test/simv: undefined symbol: vcsd_end_no_value_var_info')
+ANF: vcsd_remove_xprop_merge_mode_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vcsd_remove_xprop_merge_mode_callback')
+ANF: vhpi_get_cb_info('/home/yz87/SIGMA/test/simv: undefined symbol: vhpi_get_cb_info')
+ANF: vhpi_free_handle('/home/yz87/SIGMA/test/simv: undefined symbol: vhpi_free_handle')
+ANF: vhpi_fetch_vcsd_handle('/home/yz87/SIGMA/test/simv: undefined symbol: vhpi_fetch_vcsd_handle')
+ANF: vhpi_fetch_vpi_handle('/home/yz87/SIGMA/test/simv: undefined symbol: vhpi_fetch_vpi_handle')
+ANF: vhpi_has_verilog_parent('/home/yz87/SIGMA/test/simv: undefined symbol: vhpi_has_verilog_parent')
+ANF: vhpi_is_verilog_scope('/home/yz87/SIGMA/test/simv: undefined symbol: vhpi_is_verilog_scope')
+ANF: scsd_xprop_is_enabled('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_is_enabled')
+ANF: scsd_xprop_sig_is_promoted('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_sig_is_promoted')
+ANF: scsd_xprop_int_xvalue('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_int_xvalue')
+ANF: scsd_xprop_bool_xvalue('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_bool_xvalue')
+ANF: scsd_xprop_enum_xvalue('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_enum_xvalue')
+ANF: scsd_xprop_register_merge_mode_cb('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_register_merge_mode_cb')
+ANF: scsd_xprop_delete_merge_mode_cb('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_delete_merge_mode_cb')
+ANF: scsd_xprop_get_merge_mode('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_xprop_get_merge_mode')
+ANF: scsd_thread_get_info('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_thread_get_info')
+ANF: scsd_thread_vc_init('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_thread_vc_init')
+ANF: scsd_master_set_delta_sync_cbk('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_master_set_delta_sync_cbk')
+ANF: scsd_fgp_get_fsdb_cores('/home/yz87/SIGMA/test/simv: undefined symbol: scsd_fgp_get_fsdb_cores')
+ANF: msvEnableDumpingMode('/home/yz87/SIGMA/test/simv: undefined symbol: msvEnableDumpingMode')
+ANF: msvGetVersion('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetVersion')
+ANF: msvGetInstProp('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetInstProp')
+ANF: msvIsSpiceEngineReady('/home/yz87/SIGMA/test/simv: undefined symbol: msvIsSpiceEngineReady')
+ANF: msvSetAddProbeCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvSetAddProbeCallback')
+ANF: msvGetInstHandle('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetInstHandle')
+ANF: msvGetProbeByInst('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetProbeByInst')
+ANF: msvGetSigHandle('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetSigHandle')
+ANF: msvGetProbeBySig('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetProbeBySig')
+ANF: msvGetProbeInfo('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetProbeInfo')
+ANF: msvRelease('/home/yz87/SIGMA/test/simv: undefined symbol: msvRelease')
+ANF: msvSetVcCallbackFunc('/home/yz87/SIGMA/test/simv: undefined symbol: msvSetVcCallbackFunc')
+ANF: msvCheckVcCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvCheckVcCallback')
+ANF: msvAddVcCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvAddVcCallback')
+ANF: msvRemoveVcCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvRemoveVcCallback')
+ANF: msvGetLatestValue('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetLatestValue')
+ANF: msvSetEndofSimCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvSetEndofSimCallback')
+ANF: msvIgnoredProbe('/home/yz87/SIGMA/test/simv: undefined symbol: msvIgnoredProbe')
+ANF: msvGetThruNetInfo('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetThruNetInfo')
+ANF: msvFreeThruNetInfo('/home/yz87/SIGMA/test/simv: undefined symbol: msvFreeThruNetInfo')
+ANF: PI_ace_get_output_time_unit('/home/yz87/SIGMA/test/simv: undefined symbol: PI_ace_get_output_time_unit')
+ANF: PI_ace_sim_sync('/home/yz87/SIGMA/test/simv: undefined symbol: PI_ace_sim_sync')
+ANF: msvGetRereadInitFile('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetRereadInitFile')
+ANF: msvSetBeforeRereadCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvSetBeforeRereadCallback')
+ANF: msvSetAfterRereadCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvSetAfterRereadCallback')
+ANF: msvSetForceCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvSetForceCallback')
+ANF: msvSetReleaseCallback('/home/yz87/SIGMA/test/simv: undefined symbol: msvSetReleaseCallback')
+ANF: msvGetForceStatus('/home/yz87/SIGMA/test/simv: undefined symbol: msvGetForceStatus')
+ANF: vhdi_dt_get_type('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_dt_get_type')
+ANF: vhdi_dt_get_key('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_dt_get_key')
+ANF: vhdi_dt_get_vhdl_enum_info('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_dt_get_vhdl_enum_info')
+ANF: vhdi_dt_get_vhdl_physical_info('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_dt_get_vhdl_physical_info')
+ANF: vhdi_dt_get_vhdl_array_info('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_dt_get_vhdl_array_info')
+ANF: vhdi_dt_get_vhdl_record_info('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_dt_get_vhdl_record_info')
+ANF: vhdi_def_traverse_module('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_def_traverse_module')
+ANF: vhdi_def_traverse_scope('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_def_traverse_scope')
+ANF: vhdi_def_traverse_variable('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_def_traverse_variable')
+ANF: vhdi_def_get_module_id_by_vhpi('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_def_get_module_id_by_vhpi')
+ANF: vhdi_def_get_handle_by_module_id('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_def_get_handle_by_module_id')
+ANF: vhdi_def_get_variable_info_by_vhpi('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_def_get_variable_info_by_vhpi')
+ANF: vhdi_def_free('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_def_free')
+ANF: vhdi_ist_traverse_scope('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_traverse_scope')
+ANF: vhdi_ist_traverse_variable('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_traverse_variable')
+ANF: vhdi_ist_convert_by_vhpi('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_convert_by_vhpi')
+ANF: vhdi_ist_clone('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_clone')
+ANF: vhdi_ist_free('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_free')
+ANF: vhdi_ist_hash_key('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_hash_key')
+ANF: vhdi_ist_compare('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_compare')
+ANF: vhdi_ist_get_value_addr('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_get_value_addr')
+ANF: vhdi_set_scsd_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_set_scsd_callback')
+ANF: vhdi_cbk_set_force_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_cbk_set_force_callback')
+ANF: vhdi_trigger_init_force('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_trigger_init_force')
+ANF: vhdi_ist_check_scsd_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_check_scsd_callback')
+ANF: vhdi_ist_add_scsd_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_add_scsd_callback')
+ANF: vhdi_ist_remove_scsd_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_remove_scsd_callback')
+ANF: vhdi_ist_get_scsd_user_data('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_get_scsd_user_data')
+ANF: vhdi_add_time_change_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_add_time_change_callback')
+ANF: vhdi_get_real_value_by_value_addr('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_get_real_value_by_value_addr')
+ANF: vhdi_get_64_value_by_value_addr('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_get_64_value_by_value_addr')
+ANF: vhdi_xprop_inst_is_promoted('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_xprop_inst_is_promoted')
+ANF: vdi_ist_convert_by_vhdi('/home/yz87/SIGMA/test/simv: undefined symbol: vdi_ist_convert_by_vhdi')
+ANF: vhdi_ist_get_module_id('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_ist_get_module_id')
+ANF: vhdi_refine_foreign_scope_type('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_refine_foreign_scope_type')
+ANF: vhdi_flush_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_flush_callback')
+ANF: vhdi_set_orig_name('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_set_orig_name')
+ANF: vhdi_set_dump_pt('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_set_dump_pt')
+ANF: vhdi_get_fsdb_option('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_get_fsdb_option')
+ANF: vhdi_fgp_get_mode('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_fgp_get_mode')
+ANF: vhdi_node_register_composite_var('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_node_register_composite_var')
+ANF: vhdi_node_analysis('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_node_analysis')
+ANF: vhdi_node_id('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_node_id')
+ANF: vhdi_node_ist_check_scsd_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_node_ist_check_scsd_callback')
+ANF: vhdi_node_ist_add_scsd_callback('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_node_ist_add_scsd_callback')
+ANF: vhdi_node_ist_get_value_addr('/home/yz87/SIGMA/test/simv: undefined symbol: vhdi_node_ist_get_value_addr')
+VCS compile option:
+ option[0]: /home/yz87/SIGMA/test/simv
+ option[1]: -sml=verdi
+ option[2]: +fsdb+gate=off
+ option[3]: -ucli2Proc
+ option[4]: -ucli
+ option[5]: -l
+ option[6]: /home/yz87/SIGMA/test/verdiLog/sim.log
+ option[7]: /opt/synopsys/vcs/P-2019.06-SP1/linux64/bin/vcs1
+ option[8]: -Mcc=gcc
+ option[9]: -Mcplusplus=g++
+ option[10]: -Masflags=
+ option[11]: -Mcfl= -pipe -fPIC -O -I/opt/synopsys/vcs/P-2019.06-SP1/include 
+ option[12]: -Mxcflags= -pipe -fPIC -I/opt/synopsys/vcs/P-2019.06-SP1/include
+ option[13]: -Mldflags= -rdynamic 
+ option[14]: -Mout=simv
+ option[15]: -Mamsrun=
+ option[16]: -Mvcsaceobjs=
+ option[17]: -Mobjects= /opt/synopsys/vcs/P-2019.06-SP1/linux64/lib/libvirsim.so /opt/synopsys/vcs/P-2019.06-SP1/linux64/lib/liberrorinf.so /opt/synopsys/vcs/P-2019.06-SP1/linux64/lib/libsnpsmalloc.so /opt/synopsys/vcs/P-2019.06-SP1/linux64/lib/libvfs.so /opt/synopsys/verdi/P-2019.06-SP1/share/PLI/VCS/LINUXAMD64/pli.a 
+ option[18]: -Mexternalobj=
+ option[19]: -Msaverestoreobj=/opt/synopsys/vcs/P-2019.06-SP1/linux64/lib/vcs_save_restore_new.o
+ option[20]: -Mcrt0=
+ option[21]: -Mcrtn=
+ option[22]: -Mcsrc=
+ option[23]: -Msyslibs=/opt/synopsys/verdi/P-2019.06-SP1/share/PLI/VCS/LINUX64/pli.a -ldl -lm 
+ option[24]: -Xvcs_run_simv=1
+ option[25]: +v2k
+ option[26]: -full64
+ option[27]: +verilog2001ext+.v
+ option[28]: +libext+.v+.sv
+ option[29]: -debug_acc+all
+ option[30]: +vpi
+ option[31]: +vcsd1
+ option[32]: +itf+/opt/synopsys/vcs/P-2019.06-SP1/linux64/lib/vcsdp_lite.tab
+ option[33]: -debug_region+cell+encrypt
+ option[34]: +lint=TFIPC-L
+ option[35]: -P
+ option[36]: /opt/synopsys/verdi/P-2019.06-SP1/share/PLI/VCS/LINUXAMD64/novas.tab
+ option[37]: +define+DW_MODEL_MISSAMPLES
+ option[38]: +define+RTLVCD
+ option[39]: -picarchive
+ option[40]: -P
+ option[41]: /opt/synopsys/verdi/P-2019.06-SP1/share/PLI/VCS/LINUX64/verdi.tab
+ option[42]: -fsdb
+ option[43]: -sverilog
+ option[44]: -gen_obj
+ option[45]: +incdir+/opt/synopsys/vcs/P-2019.06-SP1/packages/sva
+ option[46]: -y
+ option[47]: /opt/synopsys/vcs/P-2019.06-SP1/packages/sva
+ option[48]: -f
+ option[49]: tb_ctr_f.f
+ option[50]: -load
+ option[51]: /opt/synopsys/verdi/P-2019.06-SP1/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+Chronologic Simulation VCS Release P-2019.06-SP1_Full64
+Linux 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 9 16:09:48 UTC 2021 x86_64
+CPU cores: 160
+Limit information:
+======================================
+cputime		unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8192 kbytes
+coredumpsize		0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		65535
+memorylocked		64 kbytes
+maxproc		65535
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+REMOTEHOST=99-23-39-103.lightspeed.hstntx.sbcglobal.net
+VNCDESKTOP=eic-cpu.ece.rice.edu:1 (yz87)
+MANPATH=/opt/cadence/IC618/tools/dfII/man:/usr/man
+XDG_SESSION_ID=144
+SSH_AGENT_PID=117245
+HOSTNAME=eic-cpu.ece.rice.edu
+NOVAS_SYNC_MOTIF_DISP=
+SELINUX_ROLE_REQUESTED=
+HOST=eic-cpu.ece.rice.edu
+XDG_MENU_PREFIX=gnome-
+SHELL=/bin/bash
+TERM=xterm-256color
+VTE_VERSION=5204
+PDK_TSMC65=/home/yl150/shared/PDKs/TSMC/65_oa
+SSH_CLIENT=99.23.39.103 59005 22
+CONDA_SHLVL=1
+SPS_FONT_PATH=/opt/synopsys/verdi/P-2019.06-SP1/font
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/9b709ece_005f_4946_a0f6_27509d2767ad
+SELINUX_USE_CURRENT_RANGE=
+CONDA_PROMPT_MODIFIER=(base) 
+SPECTRE_HOME=/opt/cadence/SPECTRE191
+SPS_XFONT_PATH=/opt/synopsys/verdi/P-2019.06-SP1/XFont
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+SSH_TTY=/dev/pts/1
+LC_ALL=C
+QT_GRAPHICSSYSTEM_CHECKED=1
+GROUP=users
+USER=yz87
+PVS_HOME=/opt/cadence/PVS191
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/opt/synopsys/verdi/P-2019.06-SP1/share/PLI/IUS/LINUX64
+GNOME_TERMINAL_SERVICE=:1.104
+XNLSPATH=/opt/synopsys/verdi/P-2019.06-SP1/etc/access/nls
+CONDA_EXE=/home/yz87/anaconda3/bin/conda
+HOSTTYPE=x86_64-linux
+SSH_AUTH_SOCK=/run/user/59775/keyring/ssh
+MALLOC_ARENA_MAX=1
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/117205,unix/unix:/tmp/.ICE-unix/117205
+CNI_LOG_DEFAULT=/dev/null
+IC_HOME=/opt/cadence/IC617
+_CE_CONDA=
+GNOME_SHELL_SESSION_MODE=classic
+GENUS_HOME=/opt/cadence/GENUS191
+MAIL=/var/spool/mail/yz87
+PATH=/bin:/opt/synopsis/pycell/plat_linux_gcc62_64/3rd/bin:/opt/synopsis/pycell/plat_linux_gcc62_64/3rd/oa/bin/linux_rhel40_gcc62_64/opt:/opt/synopsis/pycell/plat_linux_gcc62_64/bin:/opt/synopsis/pycell/bin:/home/yz87/anaconda3/bin:/home/yz87/anaconda3/condabin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/puppetlabs/bin:/home/yz87/.local/bin:/home/yz87/.local/bin:/etc/xdg/xfce4:/usr/bin/X11:/usr/lib/X11/fonts:/usr/local:/usr/ucb:/bin:/usr/bin:/sbin:/usr/sbin:/usr/hosts:/etc:/usr/etc::/etc/xdg/xfce4:/usr/bin/X11:/usr/lib/X11/fonts:/opt/cadence/IC617/tools/bin:/opt/cadence/IC617/tools/dfII/bin:/usr/local:/usr/ucb:/bin:/usr/bin:/sbin:/usr/sbin:/usr/hosts:/etc:/usr/etc:machinePath:/opt/cadence/SPECTRE191/tools/bin:/opt/cadence/SPECTRE191/tools/dfII/bin:/opt/cadence/GENUS191/tools/bin:/opt/cadence/GENUS191/tools/dfII/bin:/opt/cadence/PVS191/tools/bin:/opt/cadence/PVS191/tools/dfII/bin:/opt/cadence/EXT191/tools/bin:/opt/cadence/EXT191/tools/dfII/bin:/opt/synopsys/vcs/P-2019.06-SP1/bin:/opt/synopsys/verdi/P-2019.06-SP1/bin:/opt/synopsys/syn/P-2019.03-SP4/bin:/opt/synopsys/icc/P-2019.03-SP4/bin:/opt/synopsys/pts/P-2019.03-SP4/bin:/opt/synopsys/hspice/P-2019.06-SP1/hspice/bin:/opt/synopsys/wv/P-2019.06-SP1/bin:/home/software/synopsys/starrc_2019_12_sp4/starrc/Q-2019.12-SP4/bin/:/opt/synopsys/lc/lc/Q-2019.12-SP4/bin:/opt/synopsys/fm_2019_12_sp4/fm/Q-2019.12-SP4/bin:/opt/synopsys/spyglass_vQ-2020.03-SP2-1/spyglass/Q-2020.03-SP2-1/SPYGLASS_HOME/bin:/opt/ansys/RedHawk_Linux64e6_V2020R2.3/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln65lp/sram_dp_hde_hvt_rvt/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln65lp/sram_sp_hde_hvt_rvt/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln65lp/sram_sp_hse_hvt_rvt/r1p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln65lp/memExplorer/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln65lp/rf_2p_hde_hvt_rvt/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln65lp/rf_sp_hdf_hvt_rvt/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/sram_dp_hde/r1p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/sram_sp_hde/r1p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/sram_sp_hsd/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/sram_2p_uhde_svt_mvt/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/rf_2p_hce/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/rf_sp_hde/r0p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/rf_sp_hse/r2p0/bin:/home/yl150/shared/PDKs/ARM/arm/tsmc/cln28hpc/rom_via_hdd/r0p0/bin:/home/yl150/shared/PDKs/TSMC_IPs/28/SRAM/MC2_2012.02.00.d/bin:/opt/cadence/INCISIVE152/tools/bin:/opt/cadence/EDI142/bin:/opt/mentor/modelsim20192/modelsim_dlx/bin:/home/yz87/.local/bin:/home/yz87/bin:/opt/mentor/calibre2019152/aoi_cal_2019.1_52.37/bin:/opt/mentor/calibre2019152/aoi_nxdat_2019.1_52.37/bin:/home/yz87/.local/bin:/home/yz87/bin:/usr/share:/opt/Xilinx/Vivado/2018.2/bin:/opt/Xilinx/SDK/2018.2/bin
+SPECTRE_DEFAULTS=-E
+QT_IM_MODULE=ibus
+CONDA_PREFIX=/home/yz87/anaconda3
+VERDI_HOME=/opt/synopsys/verdi/P-2019.06-SP1
+CALIBRE_HOME=/opt/mentor/calibre2019152/aoi_cal_2019.1_52.37
+PWD=/home/yz87/SIGMA/test
+EXT_HOME=/opt/cadence/EXT191
+XMODIFIERS=@im=none
+VCS_HOME=/opt/synopsys/vcs/P-2019.06-SP1
+EDITOR=/bin/gedit
+CNI_ROOT=/opt/synopsis/pycell
+SYS_PROG_NAME=verdi
+LANG=C
+KDEDIRS=/usr
+PYTHONHOME=/opt/synopsis/pycell/plat_linux_gcc62_64/3rd
+SELINUX_LEVEL_REQUESTED=
+CDSHOME=/opt/cadence/IC618
+PDK_TSMC40=/home/yl150/shared/PDKs/TSMC/40_oa
+SYS_INST_DIR=/opt/synopsys/verdi/P-2019.06-SP1
+LM_LICENSE_FILE=5280@cadence.lic.rice.edu:27105@synopsys.lic.rice.edu:1717@mentor.lic.rice.edu:2100@xilinx.lic.rice.edu:27109@ticcs.lic.rice.edu
+CDS_Netlisting_Mode=Analog
+_CE_M=
+SHLVL=5
+HOME=/home/yz87
+OSTYPE=linux
+VERDI_ORIGNAL_LD_LIBRARY_PATH=/opt/synopsys/verdi/P-2019.06-SP1/share/PLI/IUS/LINUX64
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+VENDOR=unknown
+LOGNAME=yz87
+MACHTYPE=x86_64
+CONDA_PYTHON_EXE=/home/yz87/anaconda3/bin/python
+PYTHONPATH=/opt/synopsis/pycell/pylib:/opt/synopsis/pycell/plat_linux_gcc62_64/pyext:/opt/synopsis/pycell/plat_linux_gcc62_64/lib:.:
+QTLIB=/usr/lib64/qt-3.3/lib
+OA_PLUGIN_PATH=/opt/synopsis/pycell/plat_linux_gcc62_64/3rd/oa/data/plugins:/opt/synopsis/pycell/quickstart:
+SSH_CONNECTION=99.23.39.103 59005 128.42.128.89 22
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-amSOYmNg0n,guid=510a92c3a5c0709ae028006f61d3e733
+XDG_DATA_DIRS=/home/yz87/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+NOVASHLPPATH=/opt/synopsys/verdi/P-2019.06-SP1/doc
+SPS_RGB_PATH=/opt/synopsys/verdi/P-2019.06-SP1/etc/rgb
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+CONDA_DEFAULT_ENV=base
+LD_NOVERSION=1
+DISPLAY=:1
+XDG_RUNTIME_DIR=/run/user/59775
+QT_PLUGIN_PATH=/opt/synopsys/verdi/P-2019.06-SP1/platform/LINUXAMD64/lib/Qt/plugins
+VCS_ARCH=linux64
+XDG_CURRENT_DESKTOP=GNOME
+COLORTERM=truecolor
+PS_HWPC=OFF
+NOVAS_LC_ALL=C
+NOVAS_SIGNAL_BASE_EXTRACTION=1
+SIGNAL_BASE_EXTRACTION=1
+NOVAS_VERDI_SVTB_BETA=1
+VERDI_SVTB_BETA=1
+NOVAS_VERDI_SVTB_ALPHA=1
+VERDI_SVTB_ALPHA=1
+NOVAS_VERDI_TB_HT=1
+VERDI_TB_HT=1
+NOVAS_WAVE_REDRAW_ALLVC=1
+WAVE_REDRAW_ALLVC=1
+NOVAS_TCL_LIBRARY=/opt/synopsys/verdi/P-2019.06-SP1/etc/access/tcl86_library
+TCL_LIBRARY=/opt/synopsys/verdi/P-2019.06-SP1/etc/access/tcl86_library
+XKEYSYMDB=/opt/synopsys/verdi/P-2019.06-SP1/etc/access/XKeysymDB2.1
+NOVAS_SIGNAL_BASED_BA=0
+SIGNAL_BASED_BA=0
+SYNOPSYS_SIM=/opt/synopsys/vcs/P-2019.06-SP1
+DISABLE_LIBRARY_MAP_CHECK=1
+SNPS_SIM_DEFAULT_GUI=verdi
+FSDB_FILE=/home/yz87/SIGMA/test/inter.fsdb
+VCS_UCLI_STDIN_BLOCKING=1
+FSDB_VHDL_PROTECTED=1
+FSDB_RD_IR_ENABLE=1
+FSDB_SVA_STATUS=1
+XLOCALEDIR=/opt/synopsys/verdi/P-2019.06-SP1/etc/access/locale
+VCS_HEAP_EXEC=true
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_STACK_EXEC=true
+VCS_EXEC_DONE=1
+VCS_STOP_SAFE=1
+DVE_SIM_SELECT_LOOP=on
+FLEXLM_BORROWFILE=/home/yz87/.eic-cpu.ece.rice.edu-borrow.txt
+Runtime command line arguments:
+argv[0]=/home/yz87/SIGMA/test/simv
+argv[1]=-sml=verdi
+argv[2]=+fsdb+gate=off
+argv[3]=-ucli2Proc
+argv[4]=-ucli
+argv[5]=-l
+argv[6]=/home/yz87/SIGMA/test/verdiLog/sim.log
+310 profile - 100
+          CPU/Mem usage: 0.020 sys,  0.100 user,  310.15M mem
+311 Elapsed time:    0:00:00    Wed Jan 26 14:53:38 2022
+312 pliAppInit
+313 ndpGetenv(FSDB_FILE): /home/yz87/SIGMA/test/inter.fsdb
+314 ndpGetenv(FSDB_SVA_STATUS): 1
+315 ndpGetenv(FSDB_VHDL_PROTECTED): 1
+316 FSDB_GATE & FSDB_RTL is disabled.
+317 FSDB_FIELDTYPE is set.
+318 Enable Parallel Dumping.
+319 pliAppMiscSet: New Sim Round
+320 pliEntryInit
+321 LIBSSCORE=found /opt/synopsys/verdi/P-2019.06-SP1/share/PLI/lib/LINUXAMD64/libsscore_vcs201906.so through $NOVAS_HOME setting.
+322 FSDB Dumper for VCS, Release Verdi_P-2019.06-SP1, Linux x86_64/64bit, 08/20/2019
+323 (C) 1996 - 2019 by Synopsys, Inc.
+324 sps_tcl_fsdbDumpfile_main at 0
+325 argv[0]: /home/yz87/SIGMA/test/inter.fsdb
+326 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+327 *Verdi* : Create FSDB file '/home/yz87/SIGMA/test/inter.fsdb'
+328 compile option from '/home/yz87/SIGMA/test/simv.daidir/vcs_rebuild'.
+329   "vcs '+v2k' '-full64' '-sverilog' '+verilog2001ext+.v' '+libext+.v+.sv' '+incdir+/opt/synopsys/vcs/P-2019.06-SP1/packages/sva' '-y' '/opt/synopsys/vcs/P-2019.06-SP1/packages/sva' '-debug_acc+all' '-debug_region+cell+encrypt' '+lint=TFIPC-L' '-P' '/opt/synopsys/verdi/P-2019.06-SP1/share/PLI/VCS/LINUXAMD64/novas.tab' '/opt/synopsys/verdi/P-2019.06-SP1/share/PLI/VCS/LINUXAMD64/pli.a' '-f' 'tb_ctr_f.f' '-R' '+define+DW_MODEL_MISSAMPLES' '+define+RTLVCD' 2>&1"
+330 sps_tcl_fsdbDumpflush_vd_main
+331 *Verdi* : Flush all FSDB Files at 0 fs.
+332 sps_tcl_fsdbDumpflush_vd_main
+333 *Verdi* : Flush all FSDB Files at 0 fs.
+334 sps_tcl_fsdbDumpflush_vd_main
+335 *Verdi* : Flush all FSDB Files at 0 fs.
+336 sps_tcl_fsdbDumpflush_vd_main
+337 *Verdi* : Flush all FSDB Files at 100,000,000 fs.
+338 End of simulation at 100000000
+339 Elapsed time:    0:00:37    Wed Jan 26 14:54:15 2022
+340 Begin FSDB profile info:
+341 FSDB Writer : bc1(0) bcn(0) mtf/stf(0/4)
+FSDB Writer elapsed time : flush(0.002206) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+342 End FSDB profile info
+343 Parallel profile    -  Flush:6 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
+344                        ProduceTime:0.365777082 ConsumerTime:0.000000000 Buffer:64MB
+345 SimExit
+346 Elapsed time:    0:00:37    Wed Jan 26 14:54:15 2022
+347 Sim process exit

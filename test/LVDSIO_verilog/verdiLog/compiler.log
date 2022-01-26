@@ -1,0 +1,22 @@
+*design* DebussyLib (btIdent Verdi_Q-2020.03-1)
+Command arguments:
+    +define+verilog
+    -f test.f
+        test_LVDSTS28HPCPBI1B.v
+        testbench_verilog_library.v
+        LVDSTS28HPCPBI1B_verilog_library.v
+
+Highest level modules:
+test_LVDSTS28HPCPBI1B
+mini_delay_bidir
+Clock_Stats
+Pattern_Gen_Ser
+Clock_to_Phase
+
+
+*Warning* duplicate port reference PAD_N
+"test_LVDSTS28HPCPBI1B.v", 161: 
+
+*Warning* duplicate port reference PAD_P
+"test_LVDSTS28HPCPBI1B.v", 162: 
+Total	0 error(s),   2 warning(s)

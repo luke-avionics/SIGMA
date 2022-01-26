@@ -18,8 +18,10 @@ TEST_DIR = $(ROOT)/test
 
 test: fan
 	$(MKDIR) test
-	$(CP) $(VMOD_DIR)/* $(TEST_DIR)
-	$(CP) $(TB_DIR)/tb_sigma_gen.sv $(TEST_DIR)
+	$(MKDIR) $(TEST_DIR)/vmod
+	$(CP) $(VMOD_DIR)/* $(TEST_DIR)/vmod
+	$(MKDIR) $(TEST_DIR)/tb
+	$(CP) $(TB_DIR)/tb_sigma_gen.sv $(TEST_DIR)/tb
 	$(CP) filelist.f $(TEST_DIR)
 	$(CD) test
 	vcs -sverilog -debug_all -full64 -f filelist.f +v2k +neg_tchk -l run.log -cpp /usr/bin/g++ ;

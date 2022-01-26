@@ -1,0 +1,23 @@
+Verdi>restart
+*Verdi* Loading libsscore_vcs201906.so
+FSDB Dumper for VCS, Release Verdi_P-2019.06-SP1, Linux x86_64/64bit, 08/20/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file '/home/yz87/SIGMA/test/inter.fsdb'
+*Verdi* : Flush all FSDB Files at 0 fs.
+*Verdi* : Enable RPC Server(216868)
+*Verdi* : Flush all FSDB Files at 0 fs.
+Chronologic VCS simulator copyright 1991-2019
+Contains Synopsys proprietary information.
+Compiler version P-2019.06-SP1_Full64; Runtime version P-2019.06-SP1_Full64;  Jan 26 14:53 2022
+Verdi>run
+Pattern Generator Started
+$finish called from file "./tb/tb_ctr_gen.v", line 177.
+$finish at simulation time            100000000
+Simulation complete, time is 100000000 fs.
+tb_ctr_gen.v, 5 : module tb_ctr_gen ();
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 100000000 fs
+CPU Time:      0.360 seconds;       Data structure size:   2.6Mb
+Wed Jan 26 14:54:15 2022
+debExit

@@ -1,0 +1,26 @@
+// Program Generated Commands Start Here
+
+// Silvaco define
++define+sse
+
+// Project Settings
++nolibcell
+-v "LVDSTS28HPCPBI1B_verilog_library.v"
+-v "testbench_verilog_library.v"
+
++libext+.v+
+"+incdir+."
+
++typdelays
+-"!file .sav="test_LVDSTS28HPCPBI1B""
+-"!control .savsim=1"
+-"!control .enablecache"
+-l "test_LVDSTS28HPCPBI1B.log"
+-"!control .savcell=0"
+-"!control .disk=10000M"
+
+// Input Files
+test_LVDSTS28HPCPBI1B.v
+
+
+// Program Generated Commands End Here

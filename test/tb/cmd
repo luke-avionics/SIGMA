@@ -1,0 +1,18 @@
+#!/bin/tcsh -f
+
+bash vcs +v2k \
+    -full64 \
+    -sverilog \
+    +verilog2001ext+.v +libext+.v+.sv +incdir+${VCS_HOME}/packages/sva -y ${VCS_HOME}/packages/sva \
+    -debug_acc+all \
+    -debug_region+cell+encrypt \
+    +lint=TFIPC-L \
+    -P ${VERDI_HOME}/share/PLI/VCS/LINUXAMD64/novas.tab ${VERDI_HOME}/share/PLI/VCS/LINUXAMD64/pli.a \
+    -f tb_ctr_f.f \
+    -R \
+    +define+DW_MODEL_MISSAMPLES \
+    #+define+RTLSAIF \
+    +define+RTLVCD  \
+    # +define+RTLFSDB  \
+    | tee run_whole_sparse_layer1_image0_pal.log
+

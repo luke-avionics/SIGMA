@@ -1,0 +1,68 @@
+Running Compilation/Elaboration
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all+dmptf -debug_region+cell+encrypt' instead.
+
+                         Chronologic VCS (TM)
+       Version Q-2020.03-SP1_Full64 -- Thu Nov 26 18:22:40 2020
+               Copyright (c) 1991-2020 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all -debug_region+cell+encrypt' instead.
+
+Parsing design file 'test_LVDSTS28HPCPBI1B.v'
+Parsing included file 'defines.h'.
+Back to file 'test_LVDSTS28HPCPBI1B.v'.
+Parsing library file 'LVDSTS28HPCPBI1B_verilog_library.v'
+Parsing library file 'testbench_verilog_library.v'
+Top Level Modules:
+       test_LVDSTS28HPCPBI1B
+TimeScale is 1 ps / 1 fs
+
+Warning-[DPIMI] Duplicate port in module instantiation
+test_LVDSTS28HPCPBI1B.v, 154
+"LVDSTS28HPCPBI1B_H XLVDSTS28HPCPBI1B_H( .PAD_N (PAD_N_h),  .PAD_P (PAD_P_h),  .VDDIO (1'b1),  .VDD (1'b1),  .VSS (1'b0),  .VSSS (1'b0),  .PAD_N (PAD_N_h),  .PAD_P (PAD_P_h),  .RESET_N (1'b0),  .VBIAS_SEL (1'b0),  .VBIAS_IN (1'b0),  .TXDRV (4'b1000),  .DDR_EN (1'b0),  .TXEN (1'b0),  .TXDA (2'b0),  .CP (1'b0),  .INV_CP (1'b0),  .RXEN (1'b1),  .RTERM_EN (rterm_en),  .RTERM_VAL (rterm_val),  .RXCM_EN (1'b0),  .BIAS_EN (1'b1),  .RXDA (rxda_h),  .TX_CM (tx_cm));"
+  Port 'PAD_N' is connected more than once for instance 'XLVDSTS28HPCPBI1B_H' 
+  of 'LVDSTS28HPCPBI1B_H'.
+  Extra connection will be ignored.
+
+
+Warning-[DPIMI] Duplicate port in module instantiation
+test_LVDSTS28HPCPBI1B.v, 154
+"LVDSTS28HPCPBI1B_H XLVDSTS28HPCPBI1B_H( .PAD_P (PAD_P_h),  .VDDIO (1'b1),  .VDD (1'b1),  .VSS (1'b0),  .VSSS (1'b0),  .PAD_N (PAD_N_h),  .PAD_P (PAD_P_h),  .RESET_N (1'b0),  .VBIAS_SEL (1'b0),  .VBIAS_IN (1'b0),  .TXDRV (4'b1000),  .DDR_EN (1'b0),  .TXEN (1'b0),  .TXDA (2'b0),  .CP (1'b0),  .INV_CP (1'b0),  .RXEN (1'b1),  .RTERM_EN (rterm_en),  .RTERM_VAL (rterm_val),  .RXCM_EN (1'b0),  .BIAS_EN (1'b1),  .RXDA (rxda_h),  .TX_CM (tx_cm));"
+  Port 'PAD_P' is connected more than once for instance 'XLVDSTS28HPCPBI1B_H' 
+  of 'LVDSTS28HPCPBI1B_H'.
+  Extra connection will be ignored.
+
+
+Warning-[TFIPC] Too few instance port connections
+test_LVDSTS28HPCPBI1B.v, 154
+test_LVDSTS28HPCPBI1B, "LVDSTS28HPCPBI1B_H XLVDSTS28HPCPBI1B_H( .VDDIO (1'b1),  .VDD (1'b1),  .VSS (1'b0),  .VSSS (1'b0),  .PAD_N (PAD_N_h),  .PAD_P (PAD_P_h),  .RESET_N (1'b0),  .VBIAS_SEL (1'b0),  .VBIAS_IN (1'b0),  .TXDRV (4'b1000),  .DDR_EN (1'b0),  .TXEN (1'b0),  .TXDA (2'b0),  .CP (1'b0),  .INV_CP (1'b0),  .RXEN (1'b1),  .RTERM_EN (rterm_en),  .RTERM_VAL (rterm_val),  .RXCM_EN (1'b0),  .BIAS_EN (1'b1),  .RXDA (rxda_h),  .TX_CM (tx_cm));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+7 modules and 0 UDP read.
+recompiling module test_LVDSTS28HPCPBI1B
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic  -o .//../test_LVDSTS28HPCPBI1B.vcssim.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../test_LVDSTS28HPCPBI1B.vcssim ]; then chmod a-x ../test_LVDSTS28HPCPBI1B.vcssim; fi
+g++  -o ../test_LVDSTS28HPCPBI1B.vcssim    -rdynamic  -Wl,-rpath='$ORIGIN'/test_LVDSTS28HPCPBI1B.vcssim.daidir -Wl,-rpath=./test_LVDSTS28HPCPBI1B.vcssim.daidir -Wl,-rpath=/home/software/synopsys/vcs_2020_03_sp1/vcs/Q-2020.03-SP1/linux64/lib -L/home/software/synopsys/vcs_2020_03_sp1/vcs/Q-2020.03-SP1/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _225109_archive_1.so _prev_archive_1.so _cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          -lvirsim -lerrorinf -lsnpsmalloc -lvfs /home/software/synopsys/verdi_2020_03_1/verdi/Q-2020.03-1/share/PLI/VCS/LINUXAMD64/pli.a    -lvcsnew -lsimprofile -luclinative /home/software/synopsys/vcs_2020_03_sp1/vcs/Q-2020.03-SP1/linux64/lib/vcs_tls.o   -Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive        _vcs_pli_stub_.o   /home/software/synopsys/vcs_2020_03_sp1/vcs/Q-2020.03-SP1/linux64/lib/vcs_save_restore_new.o -ldl -lm  -lc -lpthread -ldl 
+../test_LVDSTS28HPCPBI1B.vcssim up to date
+CPU time: .407 seconds to compile + .335 seconds to elab + .239 seconds to link
+Output file is test_LVDSTS28HPCPBI1B.vcssim.
+% ./test_LVDSTS28HPCPBI1B.vcssim to run
+Running Simulation

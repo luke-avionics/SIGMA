@@ -1,0 +1,3 @@
+Command Line: /home/software/synopsys/verdi_2020_03_1/verdi/Q-2020.03-1/platform/LINUXAMD64/bin/Novas -sx -f test.f
+uname(Linux eic-cpu.ece.rice.edu 3.10.0-1127.el7.x86_64 #1 SMP Tue Feb 18 16:39:12 EST 2020 x86_64)
+au time 10865.009216 70.654357 82.915383 delta 460349440 460349440 total 922214400 922214400
