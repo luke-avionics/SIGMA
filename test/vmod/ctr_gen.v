@@ -65,16 +65,13 @@ module ctr_gen # (
 
 
     reg [LOG2_PES-1:0]sd_table_entry_counter[I_COL_SIZE-1:0];
-    reg [LOG2_PES-1:0]sd_table_entry_counter_single;
 
-    reg tmp_and[W_COL_SIZE-1:0];
     reg slice1[W_COL_SIZE-1:0];
     reg slice2[W_COL_SIZE-1:0];
 
 
     genvar i,j,k;
-
-
+    
     
 
     // spatial and expensive way to generate the output bitmap
@@ -82,11 +79,7 @@ module ctr_gen # (
         for (i = 0; i < W_ROW_SIZE; i = i + 1) begin:for_i1
             for (j = 0; j < I_COL_SIZE; j = j + 1) begin:for_j1
                 always @(posedge clk) begin
-                    tmp_and[0] <= w_bit_map[i][0] & i_bit_map[0][j];
-                    tmp_and[1] <= w_bit_map[i][1] & i_bit_map[1][j];
-                    tmp_and[2] <= w_bit_map[i][2] & i_bit_map[2][j];
-                    tmp_and[3] <= w_bit_map[i][3] & i_bit_map[3][j];
-                    output_bit_map[i][j] <= tmp_and[0] | tmp_and[1] | tmp_and[2] | tmp_and[3];
+                    output_bit_map[i][j] <= (w_bit_map[i][0] & i_bit_map[0][j]) | (w_bit_map[i][1] & i_bit_map[1][j]) | (w_bit_map[i][2] & i_bit_map[2][j]) | (w_bit_map[i][3] & i_bit_map[3][j]);
                 end
             end
         end
@@ -149,53 +142,61 @@ module ctr_gen # (
     generate
         for (i = 0; i < I_COL_SIZE; i = i + 1) begin:for_i5
             always @(posedge clk) begin
-                i_row_counters[i] <= i_row_counters[i] + 1;                
+                if(rst) begin
+                    i_row_counters[i] <= 0; 
+                end else begin
+                    i_row_counters[i] <= i_row_counters[i] + 1;                
+                end
             end
         end
     endgenerate
 
+    always @(posedge clk) begin
+        if(rst) begin
+            w_nonzero_counter <= 0;
+        end else begin
+            if(stationary_bit_map[w_row_counter][w_col_counter] == 1)begin
+                w_nonzero_counter <= w_nonzero_counter + 1;       
+            end else begin
+                w_nonzero_counter <= w_nonzero_counter;
+            end
+        end
+    end
+
+    generate
+        for (i = 0; i < I_COL_SIZE; i = i + 1) begin
+            always @(posedge clk) begin
+                if(rst) begin
+                    i_nonzero_counters[i] <= 0;
+                end else begin
+                    if(i_bit_map[i_row_counters[i]][i] == 1) begin
+                        i_nonzero_counters[i] <= i_nonzero_counters[i] + 1;
+                    end else begin
+                        i_nonzero_counters[i] <= i_nonzero_counters[i];
+                    end
+                end
+            end
+        end
+    endgenerate
 
     generate
         for (i = 0; i < I_COL_SIZE; i = i + 1) begin:for_i6
             //generate src dest table entries
             always @(posedge clk) begin
                 if(rst) begin
-                    w_nonzero_counter <= 0;
-                    i_nonzero_counters[i] <= 0;
                     sd_table_entry_counter[i] <= 0;
-                    sd_table_entry_counter_single <= 0;
-                    
                 end else begin
-
-                    if(stationary_bit_map[w_row_counter][w_col_counter] == 1)begin
-                        w_nonzero_counter <= w_nonzero_counter + 1;
-                        if(i_bit_map[sd_table_entry_counter_single][i] == 1) begin
-                            sd_table_entry_counter[i] <= sd_table_entry_counter[i] + 1;
-                            sd_table_entry_counter_single <= sd_table_entry_counter[i];
-                            sd_table_id[i][sd_table_entry_counter_single] <= w_row_counter;
-                            sd_table_src[i][sd_table_entry_counter_single] <= i_nonzero_counters[i];
-                            sd_table_dest[i][sd_table_entry_counter_single] <= w_nonzero_counter;
-                        end else begin
-                            sd_table_entry_counter[i] <= sd_table_entry_counter[i];
-                            sd_table_id[i][sd_table_entry_counter_single] <= sd_table_id[i][sd_table_entry_counter_single];
-                            sd_table_src[i][sd_table_entry_counter_single] <= sd_table_src[i][sd_table_entry_counter_single];
-                            sd_table_dest[i][sd_table_entry_counter_single] <= sd_table_dest[i][sd_table_entry_counter_single];
-                        end
+                    if(stationary_bit_map[w_row_counter][w_col_counter] == 1 && i_bit_map[i_row_counters[i]][i] == 1)begin
+                        sd_table_entry_counter[i] <= sd_table_entry_counter[i] + 1;
+                        sd_table_id[i][sd_table_entry_counter[i]] <= w_row_counter;
+                        sd_table_src[i][sd_table_entry_counter[i]] <= i_nonzero_counters[i];
+                        sd_table_dest[i][sd_table_entry_counter[i]] <= w_nonzero_counter;
                     end else begin
-                        w_nonzero_counter <= w_nonzero_counter;
-                    end
-
-
-                    if(i_bit_map[i_row_counters[i]][i] == 1) begin
-                        if (i_nonzero_counters[i] == I_ROW_SIZE-1) begin
-                            i_nonzero_counters[i] <= 0;
-                        end else begin
-                            i_nonzero_counters[i] <= i_nonzero_counters[i] + 1;
-                        end
-                    end else begin
-                        i_nonzero_counters[i] <= i_nonzero_counters[i];
-                    end
-                    
+                        sd_table_entry_counter[i] <= sd_table_entry_counter[i];
+                        sd_table_id[i][sd_table_entry_counter[i]] <= sd_table_id[i][sd_table_entry_counter[i]];
+                        sd_table_src[i][sd_table_entry_counter[i]] <= sd_table_src[i][sd_table_entry_counter[i]];
+                        sd_table_dest[i][sd_table_entry_counter[i]] <= sd_table_dest[i][sd_table_entry_counter[i]];
+                    end                    
                 end
             
             end

@@ -1,3 +1,0 @@
-Command Line: /opt/synopsys/verdi/P-2019.06-SP1/platform/LINUXAMD64/bin/Novas -sv -sx -f tb_ctr_f.f
-uname(Linux eic-cpu.ece.rice.edu 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 9 16:09:48 UTC 2021 x86_64)
-au time 208.137037 9.204634 2.731707 delta 377823232 377823232 total 827674624 827674624

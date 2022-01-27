@@ -36,10 +36,11 @@ module tb_ctr_gen ();
 
 
     initial begin
-        i_bit_map[0][7:0]={1'b0, 1'b1, 1'b1, 1'b0, 1'b1, 1'b1, 1'b0, 1'b0};  
-        i_bit_map[1][7:0]={1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0};  
-        i_bit_map[2][7:0]={1'b1, 1'b0, 1'b1, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0};  
         i_bit_map[3][7:0]={1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b1, 1'b0, 1'b0};  
+        i_bit_map[2][7:0]={1'b1, 1'b0, 1'b1, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0};  
+        i_bit_map[1][7:0]={1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0};  
+        i_bit_map[0][7:0]={1'b0, 1'b1, 1'b1, 1'b0, 1'b1, 1'b1, 1'b0, 1'b0};  
+
         i_nonzero_ele[31:0]={32'hABCD_1234, 32'h5678_ABCD, 32'hFFFF_1234, 32'h0000_1234,
                             32'hABCD_0000, 32'hABCD_1234, 32'h1111_1234, 32'h3333_1234,
                             32'h6666_7777, 32'h789A_0000, 32'hABCD_1234, 32'h0000_0000,
@@ -47,16 +48,17 @@ module tb_ctr_gen ();
                             32'h0000_0000, 32'h0000_0000, 32'h0000_0000, 32'h0000_0000,
                             32'h0000_0000, 32'h0000_0000, 32'h0000_0000, 32'h0000_0000,
                             32'h0000_0000, 32'h0000_0000, 32'h0000_0000, 32'h0000_0000,
-                            32'h0000_0000, 32'h0000_0000, 32'h0000_0000, 32'h0000_0000};
-        w_bit_map[0][3:0]={1'b0, 1'b1, 1'b1, 1'b0};  
-        w_bit_map[1][3:0]={1'b1, 1'b1, 1'b1, 1'b0};  
-        w_bit_map[2][3:0]={1'b1, 1'b0, 1'b1, 1'b0};  
-        w_bit_map[3][3:0]={1'b1, 1'b0, 1'b1, 1'b0};  
-        w_bit_map[4][3:0]={1'b0, 1'b0, 1'b1, 1'b0}; 
-        w_bit_map[5][3:0]={1'b1, 1'b1, 1'b0, 1'b0}; 
-        w_bit_map[6][3:0]={1'b0, 1'b0, 1'b1, 1'b0}; 
+                            32'h0000_0000, 32'h0000_0000, 32'h0000_0000, 32'h0000_0000};        
         w_bit_map[7][3:0]={1'b1, 1'b1, 1'b1, 1'b0};
-        i_nonzero_ele[31:0]={32'hABCD_1234, 32'h5678_ABCD, 32'hFFFF_1234, 32'h0000_1234,
+		w_bit_map[6][3:0]={1'b0, 1'b0, 1'b1, 1'b0}; 
+		w_bit_map[5][3:0]={1'b1, 1'b1, 1'b0, 1'b0};
+		w_bit_map[4][3:0]={1'b0, 1'b0, 1'b1, 1'b0}; 
+        w_bit_map[3][3:0]={1'b1, 1'b0, 1'b1, 1'b0};  
+        w_bit_map[2][3:0]={1'b1, 1'b0, 1'b1, 1'b0};  
+        w_bit_map[1][3:0]={1'b1, 1'b1, 1'b1, 1'b0};  
+        w_bit_map[0][3:0]={1'b0, 1'b1, 1'b1, 1'b0};  
+
+        w_nonzero_ele[31:0]={32'hABCD_1234, 32'h5678_ABCD, 32'hFFFF_1234, 32'h0000_1234,
                             32'hABCD_0000, 32'hABCD_1234, 32'h1111_1234, 32'h3333_1234,
                             32'h6666_7777, 32'h789A_0000, 32'hABCD_1234, 32'hABCD_1234,
                             32'hABCD_1234, 32'hFFFF_CCCC, 32'h0000_AAAA, 32'h0000_0000,
@@ -182,8 +184,10 @@ module tb_ctr_gen ();
 	`ifdef FSDB
 	initial
 	begin
-			$fsdbDumpfile("tb_whole_sparse_layer1_image0_pal.fsdb");
+			$fsdbDumpfile("tb_flexdpe.fsdb");
+			$fsdbDumpMDA();
 			$fsdbDumpvars;
+			#100 $finish;	
 	end
 	`endif
 
@@ -191,7 +195,7 @@ module tb_ctr_gen ();
 	`ifdef RTLFSDB
 	initial
 	begin
-			$fsdbDumpfile("tb_whole_sparse_layer1_image0_pal.rtl.fsdb");
+			$fsdbDumpfile("tb_flexdpe.rtl.fsdb");
 			$fsdbDumpvars;
 	end
 	`endif

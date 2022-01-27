@@ -12,7 +12,7 @@ bash vcs +v2k \
     -R \
     +define+DW_MODEL_MISSAMPLES \
     #+define+RTLSAIF \
-    +define+RTLVCD  \
-    # +define+RTLFSDB  \
+    # +define+RTLVCD  \
+    +define+FSDB  \
     | tee run_whole_sparse_layer1_image0_pal.log
 
